@@ -9,7 +9,7 @@ require_rel '..'
 
 class WikiData
   class Fetcher < WikiData
-    LOOKUP_FILE = 'https://raw.githubusercontent.com/everypolitician/wikidata-fetcher/master/lookup.json'
+    LOOKUP_FILE = 'https://raw.githubusercontent.com/poteris/wikidata-fetcher/master/lookup.json'
 
     def self.find(ids)
       Hash[Wikisnakker::Item.find(ids).map { |wditem| [wditem.id, new(item: wditem)] }]
